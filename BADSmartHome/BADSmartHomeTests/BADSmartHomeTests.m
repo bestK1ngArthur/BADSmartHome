@@ -1,18 +1,19 @@
 //
-//  Smart_HomeTests.m
-//  Smart HomeTests
+//  BADSmartHomeTests.m
+//  BADSmartHomeTests
 //
-//  Created by Artem Belkov on 27/07/15.
-//  Copyright © 2015 Artem Belkov. All rights reserved.
+//  Created by Artem Belkov on 02/10/15.
+//  Copyright (c) 2015 Artem Belkov. All rights reserved.
 //
 
+#import <Cocoa/Cocoa.h>
 #import <XCTest/XCTest.h>
 
-@interface Smart_HomeTests : XCTestCase
+@interface BADSmartHomeTests : XCTestCase
 
 @end
 
-@implementation Smart_HomeTests
+@implementation BADSmartHomeTests
 
 - (void)setUp {
     [super setUp];
@@ -26,7 +27,7 @@
 
 - (void)testExample {
     // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+    XCTAssert(YES, @"Pass");
 }
 
 - (void)testPerformanceExample {

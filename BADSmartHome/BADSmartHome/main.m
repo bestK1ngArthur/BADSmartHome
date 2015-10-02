@@ -1,9 +1,9 @@
 //
 //  main.m
-//  Smart Home
+//  BADSmartHome
 //
-//  Created by Artem Belkov on 27/07/15.
-//  Copyright © 2015 Artem Belkov. All rights reserved.
+//  Created by Artem Belkov on 02/10/15.
+//  Copyright (c) 2015 Artem Belkov. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>

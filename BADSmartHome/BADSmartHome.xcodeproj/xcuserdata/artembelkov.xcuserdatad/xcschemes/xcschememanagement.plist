@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Smart Home.xcscheme</key>
+		<key>BADSmartHome.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,17 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>680020661B6672960012B66F</key>
+		<key>686BF0A41BBF07C60081F101</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6800207C1B6672960012B66F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>680020871B6672960012B66F</key>
+		<key>686BF0BA1BBF07C70081F101</key>
 		<dict>
 			<key>primary</key>
 			<true/>
