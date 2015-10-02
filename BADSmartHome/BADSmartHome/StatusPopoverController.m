@@ -16,7 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do view setup here. test
+    // Do view setup here.
+    
+    // There will be smth cool
     
 }
 
