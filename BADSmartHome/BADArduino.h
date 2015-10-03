@@ -1,10 +1,12 @@
 //
-//  SettingsViewController.h
-//  Smart Home
+//  BADArduino.h
+//  BADSmartHome
 //
-//  Created by Artem Belkov on 27/07/15.
+//  Created by Artem Belkov on 03/10/15.
 //  Copyright © 2015 Artem Belkov. All rights reserved.
 //
+
+#import <Foundation/Foundation.h>
 
 #import <Cocoa/Cocoa.h>
 
@@ -15,14 +17,14 @@
 #include <IOKit/serial/ioss.h>
 #include <sys/ioctl.h>
 
-@protocol SettingsViewControllerDelegate <NSObject>
+@protocol BADArduinoDelegate <NSObject>
 
 @required
 - (void)getInputString:(NSString *)inputString;
 
 @end
 
-@interface SettingsViewController : NSViewController {
+@interface BADArduino : NSObject {
     IBOutlet NSPopUpButton *serialListPullDown;
     IBOutlet NSTextView *serialOutputArea;
     IBOutlet NSTextField *serialInputField;
@@ -33,7 +35,7 @@
     NSTextStorage *storage;
 }
 
-@property (strong, nonatomic) NSViewController <SettingsViewControllerDelegate> *delegate;
+@property (strong, nonatomic) NSViewController <BADArduinoDelegate> *delegate;
 
 @property (weak) IBOutlet NSTextField *backgroundField;
 
@@ -52,6 +54,8 @@
 //- (IBAction) hitBButton: (NSButton *) btn;
 //- (IBAction) hitCButton: (NSButton *) btn;
 - (IBAction) resetButton: (NSButton *) btn;
+
+
 
 
 

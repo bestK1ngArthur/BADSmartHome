@@ -1,24 +1,18 @@
 //
-//  SettingsViewController.m
-//  Smart Home
+//  BADArduino.m
+//  BADSmartHome
 //
-//  Created by Artem Belkov on 27/07/15.
+//  Created by Artem Belkov on 03/10/15.
 //  Copyright © 2015 Artem Belkov. All rights reserved.
 //
 
-#import "SettingsViewController.h"
+#import "BADArduino.h"
 
-@interface SettingsViewController ()
-
-@property (strong, nonatomic) NSString *currentString;
-
-@end
-
-@implementation SettingsViewController
+@implementation BADArduino
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     // we don't have a serial port open yet
     serialFileDescriptor = -1;
     readThreadRunning = FALSE;
@@ -30,7 +24,7 @@
     [serialInputField becomeFirstResponder];
     
     self.currentString = @"";
-
+    
 }
 
 // open the serial port
@@ -281,7 +275,7 @@
     }
 }
 
-// action from refresh button 
+// action from refresh button
 - (IBAction) refreshAction: (id) cntrl {
     [self refreshSerialList:@"Select a Serial Port"];
     
@@ -302,28 +296,28 @@
 }
 
 /*
-// action from send button and on return in the text field
-- (IBAction) sliderChange: (NSSlider *) sldr {
-    uint8_t val = [sldr intValue];
-    [self writeByte:&val];
-}
-
-
-// action from the A button
-- (IBAction) hitAButton: (NSButton *) btn {
-    [self writeString:@"A"];
-}
-
-// action from the B button
-- (IBAction) hitBButton: (NSButton *) btn {
-    [self writeString:@"B"];
-}
-
-// action from the C button
-- (IBAction) hitCButton: (NSButton *) btn {
-    [self writeString:@"C"];
-}
-*/ 
+ // action from send button and on return in the text field
+ - (IBAction) sliderChange: (NSSlider *) sldr {
+ uint8_t val = [sldr intValue];
+ [self writeByte:&val];
+ }
+ 
+ 
+ // action from the A button
+ - (IBAction) hitAButton: (NSButton *) btn {
+ [self writeString:@"A"];
+ }
+ 
+ // action from the B button
+ - (IBAction) hitBButton: (NSButton *) btn {
+ [self writeString:@"B"];
+ }
+ 
+ // action from the C button
+ - (IBAction) hitCButton: (NSButton *) btn {
+ [self writeString:@"C"];
+ }
+ */
 
 // action from the reset button
 - (IBAction) resetButton: (NSButton *) btn {
@@ -335,5 +329,6 @@
         ioctl(serialFileDescriptor, TIOCCDTR);
     }
 }
+
 
 @end

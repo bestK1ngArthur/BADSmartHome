@@ -14,8 +14,8 @@
 		686BF0D41BBF08520081F101 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 686BF0CF1BBF08520081F101 /* SettingsViewController.m */; };
 		686BF0D51BBF08520081F101 /* StatusPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 686BF0D11BBF08520081F101 /* StatusPopoverController.m */; };
 		686BF0D61BBF08520081F101 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 686BF0D31BBF08520081F101 /* ViewController.m */; };
-		686BF0D71BBF085B0081F101 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 686BF0A91BBF07C70081F101 /* Info.plist */; };
 		686BF0DA1BBF08900081F101 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 686BF0D81BBF08900081F101 /* Main.storyboard */; };
+		688323421BBFF1AC003CD41E /* BADArduino.m in Sources */ = {isa = PBXBuildFile; fileRef = 688323411BBFF1AC003CD41E /* BADArduino.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +45,8 @@
 		686BF0D21BBF08520081F101 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		686BF0D31BBF08520081F101 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		686BF0D91BBF08900081F101 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		688323401BBFF1AC003CD41E /* BADArduino.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BADArduino.h; sourceTree = "<group>"; };
+		688323411BBFF1AC003CD41E /* BADArduino.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BADArduino.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,8 @@
 		686BF09C1BBF07C60081F101 = {
 			isa = PBXGroup;
 			children = (
+				688323401BBFF1AC003CD41E /* BADArduino.h */,
+				688323411BBFF1AC003CD41E /* BADArduino.m */,
 				686BF0A71BBF07C60081F101 /* BADSmartHome */,
 				686BF0BE1BBF07C70081F101 /* BADSmartHomeTests */,
 				686BF0A61BBF07C60081F101 /* Products */,
@@ -171,7 +175,7 @@
 		686BF09D1BBF07C60081F101 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Artem Belkov";
 				TargetAttributes = {
 					686BF0A41BBF07C60081F101 = {
@@ -209,7 +213,6 @@
 			files = (
 				686BF0DA1BBF08900081F101 /* Main.storyboard in Resources */,
 				686BF0B31BBF07C70081F101 /* Images.xcassets in Resources */,
-				686BF0D71BBF085B0081F101 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +234,7 @@
 				686BF0CD1BBF08460081F101 /* AppDelegate.m in Sources */,
 				686BF0AE1BBF07C70081F101 /* main.m in Sources */,
 				686BF0D51BBF08520081F101 /* StatusPopoverController.m in Sources */,
+				688323421BBFF1AC003CD41E /* BADArduino.m in Sources */,
 				686BF0D61BBF08520081F101 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +290,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -352,6 +357,7 @@
 				INFOPLIST_FILE = BADSmartHome/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.artem.belkov.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -364,6 +370,7 @@
 				INFOPLIST_FILE = BADSmartHome/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.artem.belkov.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -383,6 +390,7 @@
 				);
 				INFOPLIST_FILE = BADSmartHomeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.artem.belkov.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BADSmartHome.app/Contents/MacOS/BADSmartHome";
 			};
@@ -399,6 +407,7 @@
 				);
 				INFOPLIST_FILE = BADSmartHomeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.artem.belkov.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BADSmartHome.app/Contents/MacOS/BADSmartHome";
 			};
